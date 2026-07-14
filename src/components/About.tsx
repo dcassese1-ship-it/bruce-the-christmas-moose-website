@@ -11,19 +11,27 @@ export default function About() {
           </h2>
           <div className="mt-5 space-y-4 text-lg leading-relaxed text-cocoa/90">
             <p>
-              Once upon a snowy morning, a big-hearted moose named Bruce
-              wandered into the North Pole looking for a warm place to rest
-              his antlers &mdash; and he never left! Now he spends his days
-              baking gingerbread with the elves, humming carols with the
-              reindeer, and collecting the very best stories the winter
-              woods have to offer.
+              Bruce isn&apos;t like the other moose in his snowy northern
+              forest. While the others napped under the stars, Bruce would
+              gaze toward Santa&apos;s workshop, dreaming of soaring through
+              the sky just like the reindeer.
             </p>
             <p>
-              Bruce believes hot cocoa tastes better with a story, every
-              snowflake is one-of-a-kind, and there&apos;s always room for
-              one more friend by the fire. Join him each week for gentle
-              Christmas tales, sing-along songs, and cozy winter adventures
-              made just for kids and families.
+              The other animals laughed. &ldquo;Silly moose &mdash;
+              you&apos;re too big to fly!&rdquo; But Bruce never stopped
+              believing.
+            </p>
+            <p>
+              Then one Christmas Eve, when Santa&apos;s reindeer all came
+              down with the sneezes and sniffles, Bruce got his chance. With
+              a little Christmas magic and a lot of courage, he proved that
+              a moose CAN fly &mdash; and saved Christmas in the process.
+            </p>
+            <p>
+              Now Bruce spends his time helping Santa, meeting new friends,
+              and reminding everyone &mdash; big or small &mdash; that when
+              you believe in yourself, dream big, and never stop trying,
+              magic really does happen.
             </p>
           </div>
 
