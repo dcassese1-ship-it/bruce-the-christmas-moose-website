@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+:root {
+  --color-snow: #fffaf3;
+  --color-snow-dim: #fdf1e2;
+  --color-holly: #1f5c3d;
+  --color-holly-dark: #123c27;
+  --color-holly-light: #2f7a52;
+  --color-berry: #c23b3b;
+  --color-berry-dark: #9c2b2b;
+  --color-berry-light: #e3665f;
+  --color-gold: #e8b84b;
+  --color-gold-light: #f7dfa0;
+  --color-gold-dark: #c8932a;
+  --color-cocoa: #4a3527;
+}
+
+@theme inline {
+  --color-snow: var(--color-snow);
+  --color-snow-dim: var(--color-snow-dim);
+  --color-holly: var(--color-holly);
+  --color-holly-dark: var(--color-holly-dark);
+  --color-holly-light: var(--color-holly-light);
+  --color-berry: var(--color-berry);
+  --color-berry-dark: var(--color-berry-dark);
+  --color-berry-light: var(--color-berry-light);
+  --color-gold: var(--color-gold);
+  --color-gold-light: var(--color-gold-light);
+  --color-gold-dark: var(--color-gold-dark);
+  --color-cocoa: var(--color-cocoa);
+  --font-heading: var(--font-fredoka);
+  --font-body: var(--font-nunito);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-snow);
+  color: var(--color-cocoa);
+  font-family: var(--font-body), sans-serif;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: var(--font-heading), sans-serif;
+}
+
+/* Gentle falling snow, decorative only */
+.snowfall {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.snowfall span {
+  position: absolute;
+  top: -10%;
+  display: block;
+  border-radius: 9999px;
+  background: white;
+  opacity: 0.85;
+  animation: snow-fall linear infinite;
+}
+
+@keyframes snow-fall {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  100% {
+    transform: translateY(115vh) translateX(20px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .snowfall span {
+    animation: none;
+    display: none;
+  }
+}
