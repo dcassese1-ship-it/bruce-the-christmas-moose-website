@@ -55,6 +55,11 @@ export default function Footer() {
                 </a>
               </li>
               <li>
+                <a href="#storybook" className="transition hover:text-gold-light">
+                  The Storybook
+                </a>
+              </li>
+              <li>
                 <a href="#music" className="transition hover:text-gold-light">
                   Songs
                 </a>
