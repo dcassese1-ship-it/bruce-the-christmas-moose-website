@@ -1,11 +1,12 @@
-// TODO: Swap these placeholder YouTube video IDs for Bruce's real uploads.
-const FEATURED_VIDEOS = [
-  { id: "PLACEHOLDER_ID_1", title: "Bruce's Big North Pole Adventure" },
-  { id: "PLACEHOLDER_ID_2", title: "The Night the Snow Sang Back" },
-  { id: "PLACEHOLDER_ID_3", title: "Bruce & the Lost Christmas Star" },
-  { id: "PLACEHOLDER_ID_4", title: "Cocoa, Carols & Cozy Blankets" },
-  { id: "PLACEHOLDER_ID_5", title: "Bruce's Sleigh Bell Sing-Along" },
-  { id: "PLACEHOLDER_ID_6", title: "A Very Mooseletide Story" },
+const FEATURED_VIDEO = {
+  id: "4BKES3nwj0Y",
+  title: "This Christmas Moose Will Melt Your Heart",
+};
+
+const SHORTS = [
+  { id: "7a1AGvUVQZA", title: "Off-Season Training" },
+  { id: "yQPw_sFmxAY", title: "Bruce Out for a Run" },
+  { id: "w3a0fz55TnE", title: "Spring Training - North Pole Flight Practice" },
 ];
 
 export default function FeaturedVideos() {
@@ -25,13 +26,34 @@ export default function FeaturedVideos() {
           </p>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {FEATURED_VIDEOS.map((video, i) => (
+        <div className="mx-auto mt-12 max-w-3xl overflow-hidden rounded-3xl border-4 border-white bg-white shadow-md ring-1 ring-holly/10 transition hover:-translate-y-1 hover:shadow-xl">
+          <div className="aspect-video w-full overflow-hidden bg-holly-dark">
+            <iframe
+              className="h-full w-full"
+              src={`https://www.youtube.com/embed/${FEATURED_VIDEO.id}`}
+              title={FEATURED_VIDEO.title}
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          </div>
+          <div className="p-4">
+            <h3 className="font-heading text-lg font-semibold text-cocoa">
+              {FEATURED_VIDEO.title}
+            </h3>
+          </div>
+        </div>
+
+        <h3 className="mt-16 text-center font-heading text-xl font-semibold text-holly">
+          Quick Winter Shorts
+        </h3>
+        <div className="mx-auto mt-6 grid max-w-3xl grid-cols-2 gap-6 sm:grid-cols-3">
+          {SHORTS.map((video) => (
             <div
-              key={`${video.id}-${i}`}
-              className="group overflow-hidden rounded-3xl border-4 border-white bg-white shadow-md ring-1 ring-holly/10 transition hover:-translate-y-1 hover:shadow-xl"
+              key={video.id}
+              className="group mx-auto w-full max-w-[220px] overflow-hidden rounded-3xl border-4 border-white bg-white shadow-md ring-1 ring-holly/10 transition hover:-translate-y-1 hover:shadow-xl"
             >
-              <div className="aspect-video w-full overflow-hidden bg-holly-dark">
+              <div className="aspect-[9/16] w-full overflow-hidden bg-holly-dark">
                 <iframe
                   className="h-full w-full"
                   src={`https://www.youtube.com/embed/${video.id}`}
@@ -41,10 +63,10 @@ export default function FeaturedVideos() {
                   allowFullScreen
                 />
               </div>
-              <div className="p-4">
-                <h3 className="font-heading text-lg font-semibold text-cocoa">
+              <div className="p-3">
+                <h4 className="font-heading text-sm font-semibold text-cocoa">
                   {video.title}
-                </h3>
+                </h4>
               </div>
             </div>
           ))}
