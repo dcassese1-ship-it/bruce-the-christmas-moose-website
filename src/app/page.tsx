@@ -5,6 +5,7 @@ import About from "@/components/About";
 import Storybook from "@/components/Storybook";
 import Music from "@/components/Music";
 import Merch from "@/components/Merch";
+import ColoringPages from "@/components/ColoringPages";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
         <FeaturedVideos />
         <About />
         <Storybook />
+        <ColoringPages />
         <Music />
         <Merch />
       </main>
