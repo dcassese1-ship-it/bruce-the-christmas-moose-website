@@ -4,6 +4,7 @@ const FEATURED_VIDEO = {
 };
 
 const SHORTS = [
+  { id: "J9pWOthVm1U", title: "Color Santa & Bruce!" },
   { id: "7a1AGvUVQZA", title: "Off-Season Training" },
   { id: "yQPw_sFmxAY", title: "Bruce Out for a Run" },
   { id: "w3a0fz55TnE", title: "Spring Training - North Pole Flight Practice" },
@@ -47,7 +48,7 @@ export default function FeaturedVideos() {
         <h3 className="mt-16 text-center font-heading text-xl font-semibold text-holly">
           Quick Winter Shorts
         </h3>
-        <div className="mx-auto mt-6 grid max-w-3xl grid-cols-2 gap-6 sm:grid-cols-3">
+        <div className="mx-auto mt-6 grid max-w-4xl grid-cols-2 gap-6 sm:grid-cols-4">
           {SHORTS.map((video) => (
             <div
               key={video.id}
