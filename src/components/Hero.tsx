@@ -1,4 +1,4 @@
-import MooseIllustration from "./MooseIllustration";
+import Image from "next/image";
 import Snowfall from "./Snowfall";
 
 export default function Hero() {
@@ -42,7 +42,16 @@ export default function Hero() {
         </div>
 
         <div className="flex flex-1 items-center justify-center">
-          <MooseIllustration className="w-56 drop-shadow-2xl sm:w-72 md:w-96" />
+          <div className="relative aspect-[4/3] w-72 overflow-hidden rounded-3xl border-4 border-gold-light/80 shadow-2xl sm:w-96 md:w-[28rem]">
+            <Image
+              src="/book/bruce-book-images/06-the-flight-begins.png"
+              alt="Bruce the Christmas Moose pulling Santa's sleigh across a full moon on Christmas Eve"
+              fill
+              priority
+              className="object-cover"
+              sizes="(min-width: 768px) 28rem, (min-width: 640px) 24rem, 18rem"
+            />
+          </div>
         </div>
       </div>
 

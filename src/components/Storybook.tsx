@@ -1,5 +1,14 @@
 import Image from "next/image";
 
+const LANGUAGES = [
+  { flag: "🇺🇸", label: "English", id: "DhiJ5aQpXog" },
+  { flag: "🇪🇸", label: "Español", id: "GLn5tR6CUuQ" },
+  { flag: "🇧🇷", label: "Português", id: "L-dSkrthY-Q" },
+  { flag: "🇩🇪", label: "Deutsch", id: "6CnLIq5rmXM" },
+  { flag: "🇫🇷", label: "Français", id: "DX_iSSvOqTw" },
+  { flag: "🇯🇵", label: "日本語", id: "GrXaXFqkzg4" },
+];
+
 const GALLERY = [
   {
     src: "/book/bruce-book-images/02-dreaming-to-fly.png",
@@ -38,7 +47,7 @@ export default function Storybook() {
             The tale of the moose who saved Christmas
           </p>
           <span className="mt-5 inline-block rounded-full bg-gold px-4 py-1 text-sm font-bold uppercase tracking-wide text-cocoa">
-            📖 Coming Soon
+            📖 Now Playing on YouTube
           </span>
         </div>
 
@@ -67,11 +76,38 @@ export default function Storybook() {
             <p className="mt-6 text-cocoa/80">
               Bruce dreams of soaring through the sky like Santa&apos;s
               reindeer &mdash; if only a big, clumsy moose could ever fly.
-              But when the reindeer all come down with a case of the Snow
-              Flu on Christmas Eve, Bruce finally gets his chance to prove
+              But when the reindeer all catch a terrible cold on Christmas
+              Eve, Bruce finally gets his chance to prove
               that even the most unlikely dreamer can save the day.
             </p>
           </div>
+        </div>
+
+        <div className="mt-14 text-center">
+          <h3 className="font-heading text-xl font-semibold text-holly">
+            Watch the Story in Your Language
+          </h3>
+          <div className="mt-5 flex flex-wrap justify-center gap-3">
+            {LANGUAGES.map((lang) => (
+              <a
+                key={lang.id}
+                href={`https://www.youtube.com/watch?v=${lang.id}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 font-semibold text-cocoa shadow-sm ring-1 ring-holly/15 transition hover:-translate-y-0.5 hover:bg-gold-light/40"
+              >
+                <span aria-hidden="true">{lang.flag}</span> {lang.label}
+              </a>
+            ))}
+          </div>
+          <a
+            href="https://www.youtube.com/playlist?list=PLfp6oLkmMQz4"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-5 inline-block text-sm font-semibold text-berry underline-offset-4 hover:underline"
+          >
+            See the full storybook playlist &rarr;
+          </a>
         </div>
 
         <div className="mt-16">

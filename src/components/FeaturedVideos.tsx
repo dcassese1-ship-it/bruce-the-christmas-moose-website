@@ -1,6 +1,6 @@
 const FEATURED_VIDEO = {
-  id: "4BKES3nwj0Y",
-  title: "This Christmas Moose Will Melt Your Heart",
+  id: "DhiJ5aQpXog",
+  title: "Bruce the Christmas Moose: The Moose Who Saved Christmas (Storybook Read-Aloud)",
 };
 
 const SHORTS = [
