@@ -9,6 +9,11 @@ const SONGS = [
     title: "Bruce, el Alce de Navidad: Canción de Navidad",
     language: "Español",
   },
+  {
+    id: "rLtKbM1PiGU",
+    title: "Bruce Spreads Joy to the World!",
+    language: "English",
+  },
 ];
 
 export default function Music() {
@@ -28,7 +33,7 @@ export default function Music() {
           </p>
         </div>
 
-        <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-2">
+        <div className="mx-auto mt-12 grid max-w-6xl grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {SONGS.map((song) => (
             <div
               key={song.id}

@@ -1,11 +1,12 @@
 import Image from "next/image";
 
-const LANGUAGES = [
+// A language with no `id` has no video yet and renders as a "Coming soon" pill.
+const LANGUAGES: { flag: string; label: string; id?: string }[] = [
   { flag: "🇺🇸", label: "English", id: "DhiJ5aQpXog" },
   { flag: "🇪🇸", label: "Español", id: "GLn5tR6CUuQ" },
   { flag: "🇧🇷", label: "Português", id: "L-dSkrthY-Q" },
-  { flag: "🇩🇪", label: "Deutsch", id: "6CnLIq5rmXM" },
-  { flag: "🇫🇷", label: "Français", id: "DX_iSSvOqTw" },
+  { flag: "🇩🇪", label: "Deutsch" },
+  { flag: "🇫🇷", label: "Français", id: "6CnLIq5rmXM" },
   { flag: "🇯🇵", label: "日本語", id: "GrXaXFqkzg4" },
 ];
 
@@ -88,17 +89,29 @@ export default function Storybook() {
             Watch the Story in Your Language
           </h3>
           <div className="mt-5 flex flex-wrap justify-center gap-3">
-            {LANGUAGES.map((lang) => (
-              <a
-                key={lang.id}
-                href={`https://www.youtube.com/watch?v=${lang.id}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 font-semibold text-cocoa shadow-sm ring-1 ring-holly/15 transition hover:-translate-y-0.5 hover:bg-gold-light/40"
-              >
-                <span aria-hidden="true">{lang.flag}</span> {lang.label}
-              </a>
-            ))}
+            {LANGUAGES.map((lang) =>
+              lang.id ? (
+                <a
+                  key={lang.label}
+                  href={`https://www.youtube.com/watch?v=${lang.id}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 font-semibold text-cocoa shadow-sm ring-1 ring-holly/15 transition hover:-translate-y-0.5 hover:bg-gold-light/40"
+                >
+                  <span aria-hidden="true">{lang.flag}</span> {lang.label}
+                </a>
+              ) : (
+                <span
+                  key={lang.label}
+                  className="inline-flex cursor-default items-center gap-2 rounded-full bg-white/60 px-4 py-2 font-semibold text-cocoa/50 ring-1 ring-holly/10"
+                >
+                  <span aria-hidden="true">{lang.flag}</span> {lang.label}
+                  <span className="text-xs font-bold uppercase tracking-wide text-cocoa/50">
+                    Coming soon
+                  </span>
+                </span>
+              )
+            )}
           </div>
           <a
             href="https://www.youtube.com/playlist?list=PLfp6oLkmMQz4"
