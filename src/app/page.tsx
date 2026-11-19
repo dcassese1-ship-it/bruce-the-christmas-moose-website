@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import FeaturedVideos from "@/components/FeaturedVideos";
 import About from "@/components/About";
 import Storybook from "@/components/Storybook";
+import StorySeries from "@/components/StorySeries";
 import Music from "@/components/Music";
 import Merch from "@/components/Merch";
 import ColoringPages from "@/components/ColoringPages";
@@ -17,6 +18,7 @@ export default function Home() {
         <FeaturedVideos />
         <About />
         <Storybook />
+        <StorySeries />
         <ColoringPages />
         <Music />
         <Merch />

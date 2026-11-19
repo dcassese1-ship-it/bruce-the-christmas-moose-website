@@ -6,6 +6,7 @@ const NAV_LINKS = [
   { href: "#videos", label: "Videos" },
   { href: "#about", label: "About" },
   { href: "#storybook", label: "Storybook" },
+  { href: "#story-series", label: "9-Part Story" },
   { href: "#coloring", label: "Coloring" },
   { href: "#music", label: "Songs" },
   { href: "#merch", label: "Merch" },
